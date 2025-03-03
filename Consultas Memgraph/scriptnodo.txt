@@ -1,0 +1,2 @@
+LOAD CSV FROM '/usr/lib/memgraph/Nodes.csv' NO HEADER as row 
+CREATE (n:Nodes{id: row[0], name: row[1]});

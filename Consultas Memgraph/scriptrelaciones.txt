@@ -1,0 +1,60 @@
+LOAD CSV FROM '/usr/lib/memgraph/isLocatedIn.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:isLocatedIn]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasTag.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasTag]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasCreator.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasCreator]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/replyOf.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:replyOf]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/likes.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:likes]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/isPartOf.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:isPartOf]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasType.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasType]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/isSubclassOf.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:isSubclassOf]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/containerOf.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:containerOf]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasMember.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasMember]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasModerator.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasModerator]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/hasInterest.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:hasInterest]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/knows.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:knows]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/studyAt.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:studyAt]->(end);
+
+LOAD CSV FROM '/usr/lib/memgraph/workAt.csv' WITH HEADER  as row
+MATCH (start: Nodes {id: row.from}), (end: Nodes {id: row.to})
+CREATE (start)-[:workAt]->(end);
+
